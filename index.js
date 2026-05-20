@@ -4,7 +4,7 @@ const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMembers,
-    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildMessages,   // 
     GatewayIntentBits.MessageContent
   ]
 });
@@ -21,7 +21,7 @@ client.on(Events.GuildMemberAdd, member => {
 
 client.on(Events.MessageCreate, message => {
   if (message.author.bot) return;
-  if (message.content === "ping") {
+  if (message.content.toLowerCase() === "ping") {
     message.reply("pong ✅");
   }
 });
