@@ -1,4 +1,4 @@
-const { Client, GatewayIntentBits, Events } = require("discord.js");
+import { Client, GatewayIntentBits, Events } from "discord.js";
 
 const client = new Client({
   intents: [
